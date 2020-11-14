@@ -1,0 +1,26 @@
+{
+    "name": "artarts36/ru-spelling",
+    "description": "Russian Spelling",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ArtARTs36",
+            "email": "temicska99@mail.ru"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpunit/phpunit": "7.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArtARTs36\\RuSpelling\\": "src"
+        }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit tests --colors=always"
+        ]
+    }
+}
