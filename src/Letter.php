@@ -4,7 +4,7 @@ namespace ArtARTs36\RuSpelling;
 
 class Letter
 {
-    public const MAP_WITH_ENG = [
+    public const MAP_ENG = [
         'а' => 'a', 'б' => 'b', 'в' => 'v',
         'г' => 'g', 'д' => 'd', 'е' => 'e',
         'ё' => 'e', 'ж' => 'zh', 'з' => 'z',

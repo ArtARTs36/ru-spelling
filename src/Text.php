@@ -6,6 +6,6 @@ class Text
 {
     public static function translitToEng(string $text): string
     {
-        return strtr($text, Letter::MAP_WITH_ENG);
+        return strtr($text, Letter::MAP_ENG);
     }
 }
