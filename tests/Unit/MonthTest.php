@@ -7,6 +7,9 @@ use PHPUnit\Framework\TestCase;
 
 class MonthTest extends TestCase
 {
+    /**
+     * @covers \ArtARTs36\RuSpelling\Month::getNominativeName
+     */
     public function testGetNominativeName(): void
     {
         self::assertEquals('Январь', Month::getNominativeName(1));
@@ -23,6 +26,14 @@ class MonthTest extends TestCase
 
         self::assertEquals('Май', Month::getNominativeName(5));
         self::assertEquals('Май', Month::getNominativeName($this->createDate(5)));
+    }
+
+    /**
+     * @covers \ArtARTs36\RuSpelling\Month::getNumberFromName
+     */
+    public static function testGetNumberFromName(): void
+    {
+        self::assertEquals(1, Month::getNumberFromName('Январь'));
     }
 
     private function createDate(int $month): \DateTime
