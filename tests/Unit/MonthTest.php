@@ -34,6 +34,7 @@ class MonthTest extends TestCase
     public static function testGetNumberFromName(): void
     {
         self::assertEquals(1, Month::getNumberFromName('Январь'));
+        self::assertEquals(1, Month::getNumberFromName('ЯнварЯ'));
     }
 
     private function createDate(int $month): \DateTime

@@ -2,6 +2,8 @@
 
 namespace ArtARTs36\RuSpelling;
 
+use ArtARTs36\RuSpelling\Support\MbUcFirst;
+
 /**
  * @method static string getNominativeName(\DateTimeInterface|int $dateOrMonth)
  * @method static string getGenitiveName(\DateTimeInterface|int $dateOrMonth)
@@ -122,6 +124,8 @@ class Month
 
     public static function getNumberFromName(string $name): ?string
     {
+        $name = MbUcFirst::handle(mb_strtolower($name));
+
         foreach (static::CASES as $case) {
             if (in_array($name, $case)) {
                 return array_search($name, $case);
