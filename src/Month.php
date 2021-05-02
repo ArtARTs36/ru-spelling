@@ -122,7 +122,7 @@ class Month
         throw new \BadMethodCallException();
     }
 
-    public static function getNumberFromName(string $name): ?string
+    public static function getNumberFromName(string $name): ?int
     {
         $name = MbUcFirst::handle(mb_strtolower($name));
 
